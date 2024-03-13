@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeneralskiiPracticeMAUI.MainPage" Title="БД Оптовая база">
+
+    <StackLayout>
+        <Label Text="Список поставщиков"/>
+        <ListView x:Name="lvDeliveries">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Product_Code}" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Supplier_Number}" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Product_Code}" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Delivery_Date}" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Quantity_Supplied}" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Invoice_Number}" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Добавить запись" x:Name="btnAdd" Clicked="btnAdd_Clicked"/>
+        <Button Text="Редактировать запись" x:Name="btnEdit" Clicked="btnEdit_Clicked"/>
+        <Button Text="Удалить запись" x:Name="btnDelete" Clicked="btnDelete_Clicked"/>
+    </StackLayout>
+</ContentPage>
